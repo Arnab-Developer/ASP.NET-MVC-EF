@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MobiBookModelStoreContainer" CdmEntityContainer="MobiBookEntities">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="MobiBookModel.Product">
+        <MappingFragment StoreEntitySet="tbl_Search_Product">
+          <ScalarProperty Name="PK_SearchId" ColumnName="PK_SearchId" />
+          <ScalarProperty Name="PK_ProductID" ColumnName="PK_ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="BookProvider" ColumnName="BookProvider" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="WebImage" ColumnName="WebImage" />
+          <ScalarProperty Name="WapImage" ColumnName="WapImage" />
+          <ScalarProperty Name="ZoomWebImage" ColumnName="ZoomWebImage" />
+          <ScalarProperty Name="ZoomWapImage" ColumnName="ZoomWapImage" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="IsAdultContent" ColumnName="IsAdultContent" />
+          <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+          <ScalarProperty Name="Fk_GenreID" ColumnName="Fk_GenreID" />
+          <ScalarProperty Name="IsAllYouCanRead" ColumnName="IsAllYouCanRead" />
+          <ScalarProperty Name="IsRental" ColumnName="IsRental" />
+          <ScalarProperty Name="Isr" ColumnName="Isr" />
+          <ScalarProperty Name="IsFreeGiveAway" ColumnName="IsFreeGiveAway" />
+          <ScalarProperty Name="IsBSVFree" ColumnName="IsBSVFree" />
+          <ScalarProperty Name="IsShared" ColumnName="IsShared" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Point" ColumnName="Point" />
+          <ScalarProperty Name="ConvertedPoints" ColumnName="ConvertedPoints" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="MappedDate" ColumnName="MappedDate" />
+          <ScalarProperty Name="SupportedDevice" ColumnName="SupportedDevice" />
+          <ScalarProperty Name="HasProductIdentifier" ColumnName="HasProductIdentifier" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="DefaultStoryID" ColumnName="DefaultStoryID" />
+          <ScalarProperty Name="AvgRating" ColumnName="AvgRating" />
+          <ScalarProperty Name="PurchaseCount" ColumnName="PurchaseCount" />
+          <ScalarProperty Name="StoryCount" ColumnName="StoryCount" />
+          <ScalarProperty Name="HasStorySample" ColumnName="HasStorySample" />
+          <ScalarProperty Name="IsBitway" ColumnName="IsBitway" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

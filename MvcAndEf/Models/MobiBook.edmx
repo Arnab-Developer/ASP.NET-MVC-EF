@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MobiBookModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MobiBookModelStoreContainer">
+          <EntitySet Name="tbl_Search_Product" EntityType="MobiBookModel.Store.tbl_Search_Product" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="tbl_Search_Product">
+          <Key>
+            <PropertyRef Name="PK_SearchId" />
+          </Key>
+          <Property Name="PK_SearchId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PK_ProductID" Type="int" />
+          <Property Name="ProductCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="Title" Type="nvarchar" MaxLength="400" />
+          <Property Name="Description" Type="nvarchar" />
+          <Property Name="BookProvider" Type="int" />
+          <Property Name="Author" Type="nvarchar" />
+          <Property Name="WebImage" Type="varchar" MaxLength="400" />
+          <Property Name="WapImage" Type="varchar" MaxLength="400" />
+          <Property Name="ZoomWebImage" Type="varchar" MaxLength="400" />
+          <Property Name="ZoomWapImage" Type="varchar" MaxLength="400" />
+          <Property Name="ProductType" Type="int" />
+          <Property Name="IsAdultContent" Type="bit" />
+          <Property Name="LanguageID" Type="int" />
+          <Property Name="Fk_GenreID" Type="int" />
+          <Property Name="IsAllYouCanRead" Type="bit" Nullable="false" />
+          <Property Name="IsRental" Type="bit" />
+          <Property Name="Isr" Type="bit" />
+          <Property Name="IsFreeGiveAway" Type="bit" />
+          <Property Name="IsBSVFree" Type="bit" />
+          <Property Name="IsShared" Type="bit" />
+          <Property Name="Keywords" Type="nvarchar" MaxLength="500" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Point" Type="int" />
+          <Property Name="ConvertedPoints" Type="int" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="MappedDate" Type="datetime" />
+          <Property Name="SupportedDevice" Type="varchar" MaxLength="50" />
+          <Property Name="HasProductIdentifier" Type="bit" />
+          <Property Name="Priority" Type="int" />
+          <Property Name="DefaultStoryID" Type="int" />
+          <Property Name="AvgRating" Type="int" />
+          <Property Name="PurchaseCount" Type="int" />
+          <Property Name="StoryCount" Type="int" />
+          <Property Name="HasStorySample" Type="bit" />
+          <Property Name="IsBitway" Type="bit" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MobiBookModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MobiBookEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products" EntityType="MobiBookModel.Product" />
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="PK_SearchId" />
+          </Key>
+          <Property Name="PK_SearchId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PK_ProductID" Type="Int32" />
+          <Property Name="ProductCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="BookProvider" Type="Int32" />
+          <Property Name="Author" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="WebImage" Type="String" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="WapImage" Type="String" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="ZoomWebImage" Type="String" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="ZoomWapImage" Type="String" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="ProductType" Type="Int32" />
+          <Property Name="IsAdultContent" Type="Boolean" />
+          <Property Name="LanguageID" Type="Int32" />
+          <Property Name="Fk_GenreID" Type="Int32" />
+          <Property Name="IsAllYouCanRead" Type="Boolean" Nullable="false" />
+          <Property Name="IsRental" Type="Boolean" />
+          <Property Name="Isr" Type="Boolean" />
+          <Property Name="IsFreeGiveAway" Type="Boolean" />
+          <Property Name="IsBSVFree" Type="Boolean" />
+          <Property Name="IsShared" Type="Boolean" />
+          <Property Name="Keywords" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Point" Type="Int32" />
+          <Property Name="ConvertedPoints" Type="Int32" />
+          <Property Name="PublishDate" Type="DateTime" />
+          <Property Name="MappedDate" Type="DateTime" />
+          <Property Name="SupportedDevice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HasProductIdentifier" Type="Boolean" />
+          <Property Name="Priority" Type="Int32" />
+          <Property Name="DefaultStoryID" Type="Int32" />
+          <Property Name="AvgRating" Type="Int32" />
+          <Property Name="PurchaseCount" Type="Int32" />
+          <Property Name="StoryCount" Type="Int32" />
+          <Property Name="HasStorySample" Type="Boolean" />
+          <Property Name="IsBitway" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MobiBookModelStoreContainer" CdmEntityContainer="MobiBookEntities">
+          <EntitySetMapping Name="Products"><EntityTypeMapping TypeName="MobiBookModel.Product"><MappingFragment StoreEntitySet="tbl_Search_Product">
+            <ScalarProperty Name="PK_SearchId" ColumnName="PK_SearchId" />
+            <ScalarProperty Name="PK_ProductID" ColumnName="PK_ProductID" />
+            <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="BookProvider" ColumnName="BookProvider" />
+            <ScalarProperty Name="Author" ColumnName="Author" />
+            <ScalarProperty Name="WebImage" ColumnName="WebImage" />
+            <ScalarProperty Name="WapImage" ColumnName="WapImage" />
+            <ScalarProperty Name="ZoomWebImage" ColumnName="ZoomWebImage" />
+            <ScalarProperty Name="ZoomWapImage" ColumnName="ZoomWapImage" />
+            <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+            <ScalarProperty Name="IsAdultContent" ColumnName="IsAdultContent" />
+            <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+            <ScalarProperty Name="Fk_GenreID" ColumnName="Fk_GenreID" />
+            <ScalarProperty Name="IsAllYouCanRead" ColumnName="IsAllYouCanRead" />
+            <ScalarProperty Name="IsRental" ColumnName="IsRental" />
+            <ScalarProperty Name="Isr" ColumnName="Isr" />
+            <ScalarProperty Name="IsFreeGiveAway" ColumnName="IsFreeGiveAway" />
+            <ScalarProperty Name="IsBSVFree" ColumnName="IsBSVFree" />
+            <ScalarProperty Name="IsShared" ColumnName="IsShared" />
+            <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+            <ScalarProperty Name="Point" ColumnName="Point" />
+            <ScalarProperty Name="ConvertedPoints" ColumnName="ConvertedPoints" />
+            <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+            <ScalarProperty Name="MappedDate" ColumnName="MappedDate" />
+            <ScalarProperty Name="SupportedDevice" ColumnName="SupportedDevice" />
+            <ScalarProperty Name="HasProductIdentifier" ColumnName="HasProductIdentifier" />
+            <ScalarProperty Name="Priority" ColumnName="Priority" />
+            <ScalarProperty Name="DefaultStoryID" ColumnName="DefaultStoryID" />
+            <ScalarProperty Name="AvgRating" ColumnName="AvgRating" />
+            <ScalarProperty Name="PurchaseCount" ColumnName="PurchaseCount" />
+            <ScalarProperty Name="StoryCount" ColumnName="StoryCount" />
+            <ScalarProperty Name="HasStorySample" ColumnName="HasStorySample" />
+            <ScalarProperty Name="IsBitway" ColumnName="IsBitway" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MobiBook">
+        <EntityTypeShape EntityType="MobiBookModel.Product" Width="1.5" PointX="0.75" PointY="0.75" Height="7.941630859375" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
