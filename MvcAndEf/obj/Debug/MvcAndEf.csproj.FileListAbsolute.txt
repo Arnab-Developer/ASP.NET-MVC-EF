@@ -1,5 +1,0 @@
-c:\users\arnab.roychowdhury\documents\visual studio 2010\Projects\MvcAndEf\MvcAndEf\bin\MvcAndEf.dll
-c:\users\arnab.roychowdhury\documents\visual studio 2010\Projects\MvcAndEf\MvcAndEf\bin\MvcAndEf.pdb
-c:\users\arnab.roychowdhury\documents\visual studio 2010\Projects\MvcAndEf\MvcAndEf\obj\Debug\ResolveAssemblyReference.cache
-c:\users\arnab.roychowdhury\documents\visual studio 2010\Projects\MvcAndEf\MvcAndEf\obj\Debug\MvcAndEf.dll
-c:\users\arnab.roychowdhury\documents\visual studio 2010\Projects\MvcAndEf\MvcAndEf\obj\Debug\MvcAndEf.pdb
